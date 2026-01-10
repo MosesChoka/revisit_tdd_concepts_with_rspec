@@ -95,7 +95,7 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
-  
+
+
   Capybara.default_driver = :selenium_headless
-  
 end

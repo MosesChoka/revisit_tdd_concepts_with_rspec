@@ -7,6 +7,9 @@ class Page < ApplicationRecord
   validates :content, presence: true
   validates :published, inclusion: { in: [ true, false ] }
 
+  scope :published, -> { where(published: true) }
+  scope :ordered, -> { order(created_at: :desc) }
+
   private
 
   def make_slug
